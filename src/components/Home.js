@@ -24,7 +24,7 @@ class Home extends Component{
   //   this._isMounted = false;
   // }
 render () {
-  console.log(this.props);
+  // console.log(this.props);
   const {posts} = this.props;
   const postList= posts.length ? (
     posts.map( post => {
@@ -35,20 +35,18 @@ render () {
 
           <Link to={'/' + post.id}>
           <span className="card-title red-text">{post.title}</span>
-          </Link>  
-        
+          </Link>
             <p>{post.body}</p>
           </div>
         </div>
       )
     })
   )  : (
-    <div className="center"> No data inSide yet </div>
+    <div className="center"> No data inside yet </div>
   )
   return(
     <div className="container">
     <h4 className="center">Home</h4>
-       
     {postList}
     </div>
   )
